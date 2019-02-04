@@ -1,7 +1,11 @@
 #!/bin/sh
 set -ev
 version=6.1.2
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$version/powershell-$version-osx-x64.tar.gz
+case $(uname -s) in
+Darwin) os='osx' ;;
+*) os='linux' ;;
+esac
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$version/powershell-$version-$os-x64.tar.gz
 sudo mkdir -p /usr/local/microsoft/powershell/$version
 sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/$version
 rm /tmp/powershell.tar.gz
