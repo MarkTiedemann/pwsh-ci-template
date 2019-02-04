@@ -3,18 +3,24 @@ matrix:
     - language: sh
       os:
         - linux
+      env:
+        - PWSH_VERSION=6.1.2
+        - PWSH_OS=linux
       before_script:
-        - chmod +x ./ci/install_pwsh_unix.sh
-        - ./ci/install_pwsh_unix.sh
+        - chmod +x ./ci/install_pwsh.sh
+        - ./ci/install_pwsh.sh
       script:
         - which pwsh
         - pwsh -c \$PSVersionTable
     - language: sh
       os:
         - osx
+      env:
+        - PWSH_VERSION=6.1.2
+        - PWSH_OS=osx
       before_script:
-        - chmod +x ./ci/install_pwsh_unix.sh
-        - ./ci/install_pwsh_unix.sh
+        - chmod +x ./ci/install_pwsh.sh
+        - ./ci/install_pwsh.sh
       script:
         - which pwsh
         - pwsh -c \$PSVersionTable
