@@ -9,7 +9,7 @@ matrix:
       before_script:
         - mkdir -p $HOME/bin/pwsh
         - curl -sSL -o $HOME/bin/pwsh/pwsh.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$PWSH_VERSION/powershell-$PWSH_VERSION-linux-x64.tar.gz
-        - tar -xf $HOME/bin/pwsh/pwsh.tar.gz
+        - tar -xf $HOME/bin/pwsh/pwsh.tar.gz -C $HOME/bin/pwsh
         - chmod +x $HOME/bin/pwsh/pwsh
       script:
         - which pwsh
@@ -23,7 +23,7 @@ matrix:
       before_script:
         - mkdir -p $HOME/bin/pwsh
         - curl -sSL -o $HOME/bin/pwsh/pwsh.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$PWSH_VERSION/powershell-$PWSH_VERSION-osx-x64.tar.gz
-        - tar -xf $HOME/bin/pwsh/pwsh.tar.gz
+        - tar -xf $HOME/bin/pwsh/pwsh.tar.gz -C $HOME/bin/pwsh
         - chmod +x $HOME/bin/pwsh/pwsh
       script:
         - which pwsh
