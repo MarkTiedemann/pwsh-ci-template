@@ -2,4 +2,4 @@ build: off
 install:
   - ps: .\ci\install_win.ps1
 test_script:
-  - ps: pwsh -c \$PSVersionTable
+  - pwsh -c $PSVersionTable
