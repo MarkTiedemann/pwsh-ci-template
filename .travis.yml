@@ -4,15 +4,17 @@ matrix:
       os:
         - linux
       before_script:
-        - chmod +x ./ci/install_unix.sh
-        - ./ci/install_unix.sh
+        - chmod +x ./ci/install_pwsh_unix.sh
+        - ./ci/install_pwsh_unix.sh
       script:
+        - which pwsh
         - pwsh -c \$PSVersionTable
     - language: sh
       os:
         - osx
       before_script:
-        - chmod +x ./ci/install_unix.sh
-        - ./ci/install_unix.sh
+        - chmod +x ./ci/install_pwsh_unix.sh
+        - ./ci/install_pwsh_unix.sh
       script:
+        - which pwsh
         - pwsh -c \$PSVersionTable

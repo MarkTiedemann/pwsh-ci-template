@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ev
+set -e
 version=6.1.2
 case $(uname -s) in
 Darwin) os='osx' ;;
