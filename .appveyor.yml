@@ -1,0 +1,5 @@
+build: off
+install:
+  - ps: .\ci\install_win.sh
+test_script:
+  - ps: pwsh -c \$PSVersionTable
