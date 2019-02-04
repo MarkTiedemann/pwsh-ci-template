@@ -7,6 +7,7 @@ matrix:
         - PWSH_VERSION=6.1.2
         - PATH=$HOME/bin/pwsh:$PATH
       before_script:
+        - mkdir -p $HOME/bin/pwsh
         - curl -sSL -o $HOME/bin/pwsh/pwsh.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$PWSH_VERSION/powershell-$PWSH_VERSION-linux-x64.tar.gz
         - tar -xf $HOME/bin/pwsh/pwsh.tar.gz
         - chmod +x $HOME/bin/pwsh/pwsh
@@ -20,6 +21,7 @@ matrix:
         - PWSH_VERSION=6.1.2
         - PATH=$HOME/bin/pwsh:$PATH
       before_script:
+        - mkdir -p $HOME/bin/pwsh
         - curl -sSL -o $HOME/bin/pwsh/pwsh.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v$PWSH_VERSION/powershell-$PWSH_VERSION-osx-x64.tar.gz
         - tar -xf $HOME/bin/pwsh/pwsh.tar.gz
         - chmod +x $HOME/bin/pwsh/pwsh
